@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #272727;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navMenu {
+  position: absolute;
+  top: 10%;
+  left: 17%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
+}
+
+#one{
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase; 
+  font-weight: 500;
+  display: inline-block;
+  width: 120px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#two{
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase; 
+  font-weight: 500;
+  display: inline-block;
+  width: 166px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#three{
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase; 
+  font-weight: 500;
+  display: inline-block;
+  width: 270px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#four{
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase; 
+  font-weight: 500;
+  display: inline-block;
+  width: 290px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#five{
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase; 
+  font-weight: 500;
+  display: inline-block;
+  width: 200px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #f8d31e;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #f8d31e;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(110px);
+  transform: translateX(180px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(400px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(685px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(5):hover ~ .dot {
+    -webkit-transform: translateX(285px);
+    transform: translateX(940px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+
+h1{
+    color: #f6f4e6;
+    font-size: 1.9em;
+    text-transform: uppercase; 
+    font-weight: 500;
+}
+
+h2{
+    padding-left: 2%;
+    padding-right: 2%;
+    color: #f6f4e6;
+    font-size: 1em; 
+    font-weight: 400;
+}
+
+.responsive-banner {
+    display: inline-block;
+    margin: 50px;
+    width: 60%;
+    max-width: 490px;
+    min-width: 320px;
+    position: relative;
+    min-height: 300px;
+    max-height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+      background-image: linear-gradient(to bottom right, #D45BA1, #A784E0);
+      background-repeat: no-repeat;
+    text-align: left;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  .responsive-banner.second {
+    background-image: linear-gradient(to bottom right, #F4C28E, #E67163);
+  }
+  .container-envelope {
+    max-width: calc(100%);
+    padding: 15px;
+    color: #000000;
+     display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    min-height: 300px;
+    max-height: 450px;
+  }
+  .col-xs-12 {
+    -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    -webkit-align-self: flex-end;
+              -ms-flex-item-align: end;
+                      align-self: flex-end;
+  }
+  
+  @media (min-width: 650px) {
+    .col-xs-12 {
+      -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+      .container-envelope {
+      max-width: calc(100% - 200px);
+    }
+  }
+  p {
+      clear: both;
+      font-family: 'Work Sans', Helvetica, sans-serif;
+      text-transform: none;
+      text-rendering: optimizeLegibility;
+      font-weight: 500;
+      line-height: 1.15;
+      word-wrap: break-word;
+      margin: 1em 0 0.5em;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      position: relative;
+      word-wrap: break-word;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  a.more-link {
+      background-color: rgba(255, 255, 255, 0.35);
+      display: inline-block;
+      padding: 12px 18px;
+      color: #fff;
+      text-decoration: none;
+      font: 500 15px 'Work Sans', Helvetica, sans-serif;
+      line-height: 1.5;
+      text-align: center;
+      border: none !important;
+      position: relative;
+      border-radius: 30px;
+    text-transform: uppercase;
+      -webkit-transition: .1s all ease-in-out;
+      -moz-transition: .1s all ease-in-out;
+      -o-transition: .1s all ease-in-out;
+      transition: .1s all ease-in-out;
+  }
+  a.more-link:hover {
+    background-color: rgba(255, 255, 255, 0.50);
+  }
+  svg{
+    fill: rgba(0, 0, 0, 0.1);
+    position: absolute;
+  }
+ #xyz {
+    max-width : 50%;
+    fill: rgba(0, 0, 0, 0.1);
+    position: absolute;
+  }
+  .cirle-a {
+    bottom: -80px;
+    left: -80px;
+  }
+  .cirle-b {
+    top: -30px;
+    right: 70%;
+  }
+  .cirle-c {
+    top: -330px;
+    right: -300px;
+  }
+  .cirle-d {
+    top: 195px;
+        right: 145px;
+  }
+  img {
+    top: 0;
+    right: 0;
+  }
+  
+  
+  html, button, input, select, textarea {
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    color: #90b0bf;
+  }
+
+  .link-container {
+    text-align: center;
+  }
+  .link-container a.more-link {
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    background-color: #90b0bf;
+    color: #fff;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  .oculus {
+    width: 100%;
+    background:url(http://s6.favim.com/orig/150112/background-cold-gif-nature-Favim.com-2380226.gif);
+    /*https://i0.wp.com/media.giphy.com/media/5ERaOy5fQEIAU/giphy.gif*/
+    background-size: cover;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    padding: 40px 15px;
+  }
+  
+  .big-text {
+    font-size: 130px;
+    font-weight:800;
+    animation-delay: 1s;
+  }
+  .oculus a {
+    display: inline-block;
+    background: #fff;
+    color: #36465d;
+    text-transform: uppercase;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 40px;
+    transition: .3s;
+  }
+  .oculus a:hover {
+    background: #333;
+    color: #fff;
+    padding: 15px 20px;
+  }
+
+  .whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:750px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  
+  }
+  
+  .whatsapp-icon {
+    margin-top:13px;
+  }
+
+  #fname{
+  color: #f6f4e6;
+}
+
+    </style>
+</head>
+
+
+<body>
+    
+    <nav class="navMenu">
+        <a id="one" href="one">Inicio</a>
+        <a id="two" href="#segunda">Nosotros</a>
+        <a id="three" href="#tercera">Nuestros servicios</a>
+        <a id="four" href="#cuarta">Catalogo de clientes</a>
+        <a id="five" href="#quinta">Contactanos</a>
+        <div class="dot"></div>
+    </nav>
+    
+    <br><br><br><br>
+
+    <div>
+        <br><br>
+        <center><h1 id="segunda">NOSOTROS</p></h1></center><br>
+        <left><h2>Bienvenidos a nuestra empresa de sillones, líder en la industria del mobiliario de hogar. Nuestro compromiso es ofrecer a nuestros clientes una amplia variedad de sillones de alta calidad y diseño innovador, que sean cómodos y elegantes para cualquier estilo de decoración. Nos enorgullece contar con un equipo de expertos en diseño y producción, quienes trabajan arduamente para crear los mejores productos y ofrecer un servicio al cliente excepcional. Desde sillones reclinables hasta sofás seccionales, nuestro catálogo de productos ofrece una variedad de opciones para que nuestros clientes puedan encontrar el sillón perfecto para su hogar. Con una larga trayectoria en la industria, nuestra empresa se ha convertido en un referente en el mercado, gracias a la calidad de nuestros productos y nuestro compromiso con la satisfacción del cliente.</h2></left>
+         <br><br>
+         <div id="tercera">
+         <center><h1 >NUESTROS SERVICIOS</p></h1></center>
+        </div>
+    </div>
+    <div>
+
+
+    
+    <aside class="responsive-banner first">
+        <div class="container-envelope">
+          <svg class="cirle-a" height="160" width="160">
+            <circle cx="80" cy="80" r="80"/>
+          </svg>
+           <svg class="cirle-b" height="60" width="60">
+            <circle cx="30" cy="30" r="30"/>
+          </svg>
+          <svg class="cirle-c" height="600" width="600">
+            <circle cx="300" cy="300" r="300"/>
+          </svg>
+         <svg class="cirle-d" height="60" width="60">
+            <circle cx="30" cy="30" r="30"/>
+          </svg>
+          <img id="xyz" src="https://i.pinimg.com/originals/f2/d1/f9/f2d1f900f688ddca0765ec8e2d3900e1.png" />
+          <div class="col-xs-12">
+            <p>Explora los sofas que tenemos para ofrecer</p>
+            <a target="_blank" href="https://www.silocreativo.com/en/showcase/" class="more-link">Inspirate</a>
+          </div>
+        </div>
+      </aside>
+      
+      <aside class="responsive-banner second">
+        <div class="container-envelope">
+          <svg class="cirle-a" height="160" width="160">
+            <circle cx="80" cy="80" r="80"/>
+          </svg>
+           <svg class="cirle-b" height="60" width="60">
+            <circle cx="30" cy="30" r="30"/>
+          </svg>
+          <svg class="cirle-c" height="600" width="600">
+            <circle cx="300" cy="300" r="300"/>
+          </svg>
+         <svg class="cirle-d" height="60" width="60">
+            <circle cx="30" cy="30" r="30"/>
+          </svg>
+          <img id="xyz" src="https://i.pinimg.com/originals/f2/d1/f9/f2d1f900f688ddca0765ec8e2d3900e1.png" />
+          <div class="col-xs-12">
+            <p>Personaliza tu sillón</p>
+            <a target="_blank" href="https://www.silocreativo.com/en/showcase/" class="more-link">Inspirate</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+    <div id="cuarta">
+    <div class="oculus animated tada">
+        <div class=" big-text animated tada">15% OFF</div>
+         <div>Nuestro Catalogo de clientes</div>
+         <a href="#">Ir a tienda</a>
+       </div></div>
+
+<br><br>
+<div id="quinta">
+       <center><h1>CONTACTANOS</h1></center><br>
+       <br></div>
+
+       <form action="/ningunlugar">
+        <center><label for="fname"><p>Nombre:</p></label></center>
+        <center><input type="text" id="fname" name="fname"><br><br></center>
+        <center> <label for="ename"><p>Edad:</p></label></center>
+        <center><input type="text" id="ename" name="ename"><br><br></center>
+        <center><label for="iname"><p>Institución:</p></label></center>
+        <center><input type="text" id="iname" name="iname"><br><br></center>
+        <center><label for="lname"><p>Número de celular:</p></label></center>
+        <center><input type="text" id="lname" name="lname"><br><br></center>
+        <center><input type="submit" value="Enviar"></center>
+      </form>
+      <br><br>
+      
+     
+       
+
+	
+
+  </body>
